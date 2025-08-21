@@ -1,10 +1,8 @@
-"use client";
-
 import { Inter } from "next/font/google";
 import Providers from "./components/Providers";
 import Header from "./components/Header";
 import { Toaster } from "react-hot-toast";
-import Script from "next/script";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,14 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="https://cdn.tailwindcss.com"
-          strategy="afterInteractive" // loads after page is interactive
+      {/* <script src="https://cdn.tailwindcss.com"></script> */}
+      <Head>
+        <title>Snap-post</title>
+        <meta
+          name="description"
+          content="Demo of ImageKit integration with Next.js"
         />
-
-        {/* <script src="https://cdn.tailwindcss.com"></script> */}
-      </head>
+      </Head>
       <body className={inter.className}>
         <Providers>
           <Header />
