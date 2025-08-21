@@ -11,10 +11,12 @@
   "dependencies": {
     "@imagekit/next": "^2.1.2",
     "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
     "imagekit": "^6.0.0",
     "imagekitio-next": "^1.0.1",
     "lucide-react": "^0.539.0",
-    "mongoose": "^8.13.2",
+    "mongoose": "^8.17.2",
     "next": "^15.3.0",
     "next-auth": "^4.24.11",
     "react": "^19.1.1",
