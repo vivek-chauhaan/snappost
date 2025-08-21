@@ -9,7 +9,7 @@ export default function VideoComponent({ video }: { video: IVideo }) {
         <Link href={`/videos/${video._id}`} className="relative group w-full">
           <div
             className="rounded-xl overflow-hidden relative w-full"
-            style={{ aspectRatio: "9/16" }}
+            style={{ aspectRatio: "9/5" }}
           >
             <IKVideo
               path={video.videoUrl}
@@ -20,7 +20,7 @@ export default function VideoComponent({ video }: { video: IVideo }) {
                 },
               ]}
               controls={video.controls}
-              className="w-full h-full object-cover"
+              className="w-full h-50 object-cover"
             />
           </div>
         </Link>
@@ -31,7 +31,7 @@ export default function VideoComponent({ video }: { video: IVideo }) {
           href={`/videos/${video._id}`}
           className="hover:opacity-80 transition-opacity"
         >
-          <h2 className="card-title text-lg">{video.title}</h2>
+          <h2 className="card-title  capitalize text-lg">{video.title}</h2>
         </Link>
 
         <p className="text-sm text-base-content/70 line-clamp-2">

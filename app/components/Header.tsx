@@ -219,7 +219,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 shadow-md bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
+    <header className="sticky top-0 z-50 shadow-md bg-blue-900">
       <div className="container mx-auto flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <Link
@@ -250,8 +250,8 @@ export default function Header() {
               <User className="w-5 h-5 text-white" />
             </div>
             <div>
-              <span className="font-semibold text-gray-900">
-                {session?.user?.email?.split("@")[0] || "Guest"}
+              <span className="font-semibold text-white">
+                {session?.user?.email?.split("@")[0] || "Login"}
               </span>
             </div>
           </div>
@@ -273,7 +273,7 @@ export default function Header() {
                   <li>
                     <Link
                       href="/upload"
-                      className="flex items-center gap-2 px-4 py-3 text-gray-700 hover:bg-gray-100 transition"
+                      className="flex items-center gap-2 px-4 py-3  text-black hover:text-white hover:bg-blue-900 transition"
                       onClick={() => {
                         showNotification("Welcome to Admin Dashboard", "info");
                         setOpen(false);
@@ -287,7 +287,7 @@ export default function Header() {
                   <li>
                     <button
                       onClick={handleSignOut}
-                      className="flex items-center gap-2 w-full px-4 py-3 text-red-600 hover:bg-red-50 transition text-left"
+                      className="flex items-center gap-2 w-full px-4 py-3 hover:text-white text-black hover:bg-blue-900 transition text-left"
                     >
                       <LogOut className="w-4 h-4" /> Sign Out
                     </button>
@@ -297,9 +297,9 @@ export default function Header() {
                 <li>
                   <Link
                     href="/login"
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-100 transition"
+                    className="block px-4 text-center  py-3 text-gray-900  hover:bg-gray-200 transition"
                     onClick={() => {
-                      showNotification("Please sign in to continue", "info");
+                      // showNotification("Please sign in to continue", "info");
                       setOpen(false);
                     }}
                   >
